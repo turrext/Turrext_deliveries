@@ -1,106 +1,111 @@
 # Turrext_sell
 Gang Shipment &amp; Zone Control System for FiveM for QBCore
-# 🚀 Features – Gang Shipment & Zone Control System
+# 🚨 Gang Shipment & Zone Control System for FiveM
 
-A powerful and immersive FiveM script that blends territory mechanics, NPC interaction, and timed criminal activities for serious RP servers. Designed for **QB-Core** with modular support and simple configuration.
+> **Release Date:** January 24, 2024  
+> **Framework:** QB-Core  
+> **Inventory Support:** QB or OX  
+> **Author:** Turrext  
+> **Version:** 1.0
 
----
-
-## 🧩 Core Features
-
-### 🔹 Multi-Zone Gang Control
-- Define multiple gang territories with radius and center points
-- Blip support with visibility toggles and zone names
-- Optional radius drawing and real-time map feedback
-
-### 🔹 Intelligent NPC Behavior
-- NPCs can be configured to:
-  - Stand guard or patrol the area
-  - Freeze on spot or roam
-  - Notify police with configurable probability
-  - Automatically despawn after a timeout
-
-### 🔹 Rival Gang Interactions
-- Optional rival gang interrogation mechanic
-- Adjustable timer and trigger probability
-- Adds dynamic risk and immersion during territory conflicts
+A modular and immersive FiveM script for QB-Core featuring dynamic gang territories, interactive NPCs, timed shipment drops, and a black-market system. Fully configurable and optimized for RP servers seeking deeper criminal gameplay.
 
 ---
 
-## 📦 Shipment Mechanics
+## 🔥 Key Features
 
-### 🚚 Timed Global Shipments
-- Global shipments spawn on a timed loop (fully customizable)
-- Optional global visibility (everyone can see the drop location)
-- Shipments automatically expire after a set duration
-
-### 🎯 Drop Location Control
-- Define one or more static drop coordinates
-- Visible on the map if enabled
-- Use server-side timers for scalable performance
+- 📜 Customizable gang zones with blips and radii
+- 👥 NPC behavior control (patrol, freeze, notify police)
+- 🚔 Rival gang interrogation mechanic
+- 🚚 Scheduled shipment drops with expiration logic
+- 💲 Configurable black market store (items & weapons)
+- ⚙️ Supports both QB and OX inventory
+- 🎯 Highly optimized and easy to extend
 
 ---
 
-## 🛒 Black Market Shop Integration
+## ⚙️ Configuration Highlights
 
-- Integrated item & weapon marketplace at gang zones
-- Purchasable items include weapons, ammo, and tools
-- Each item supports:
-  - Max quantity
-  - Label
-  - Type (`item`, `weapon`, etc.)
-  - Custom price
-- Uses any QB-compatible account (`bank`, `cash`, etc.)
+```lua
+Config.Framework = "QB" -- or "ESX"
+Config.Inventory = "QB" -- or "OX"
+Config.ShowPedLoc = true
+Config.InstantRespawnAfterPedDeath = true
+Config.RivalGangInterrogateChance = 50
+Config.GlobalShipmentDropTimer = 20 * 1000
+Config.GlobalShipmentExpireTimer = 60 * 1000
+Config.ShowShipmentBlipAnyone = true
+Config.Account = "bank"
+```
 
----
+### 📍 Example Zone
 
-## 🧠 Framework Compatibility
+- **Location:** `(-1480.96, -344.8, 44.16)`
+- **Radius:** 120m  
+- **NPC Options:** Freeze, Invincible, Police Alert Chance
 
-- ✅ Built for **QB-Core**
-- ✅ Works with both **QB** and **OX** Inventory
-- ❌ No external phone or UI dependencies required (QSPhone optional)
+### 📦 Shipment Drop Example
 
----
+- **Coords:** `(-1575.72, -3012.2, 13.96)`
+- **Visible to All:** ✅  
+- **Drop Timer:** Every 20 seconds (example)  
+- **Expire After:** 60 seconds
 
-## 🔧 Developer-Friendly Config
+### 💲 Items Sold
 
-- Easy-to-read `config.lua`
-- Adjust timers, coordinates, zones, item lists, and behaviors
-- Toggle debugging logs and visual elements for testing
-
----
-
-## 🛡️ Performance & Stability
-
-- Optimized for low-latency performance in high-player environments
-- Only renders or processes NPCs within a configurable render distance
-- Efficient timers and resource cleanup mechanisms
-
----
-
-## 📈 Expandability
-
-- Add unlimited zones, NPCs, and shipment points
-- Can be extended with server-side logic for:
-  - Gang reputation
-  - Conflict resolution
-  - UI enhancements or mobile apps
+| Item          | Type     | Price | Max |
+| ------------- | -------- | ----- | --- |
+| Repair Kit    | `item`   | 500   | 50  |
+| Pistol Ammo   | `item`   | 50    | 50  |
+| Pistol Weapon | `weapon` | 1500  | 2   |
 
 ---
 
-## 🧪 Example Use Case
+## 🧠 Installation
 
-> You create a gang zone in the industrial district. A rival gang tries to intercept the shipment drop visible on the map. NPCs notify police. A shootout breaks out. Victory grants exclusive weapons at discounted prices.
-
----
-
-## 📍 Why Use This?
-
-- ✅ Real RP server value: immersive gang systems
-- ✅ Expandable for events, missions, and warfare
-- ✅ Easy to integrate with existing QB-Core projects
-- ✅ Clean structure, efficient logic, and easy customization
+1. Copy the folder into your server's `resources/` directory.
+2. Add the following to your `server.cfg`:
+   ```
+   ensure gangshipment
+   ```
+3. Configure settings in `config.lua` to match your framework/inventory setup.
+4. Restart your server and test!
 
 ---
 
-Looking to add this to your server? See the [Home Page](./README.md) for installation and configuration steps.
+## 🧪 Future Expansion Ideas
+
+- Dynamic zone claiming
+- Gang rankings and rep system
+- Mobile delivery notifications (QSPhone integration)
+- Police tracking or alerts on active shipment zones
+
+---
+
+## 📸 Screenshots
+
+> *(Add images here if desired)*  
+> NPCs guarding zones, shipment drop alerts, or store UI
+
+---
+
+## 📣 Feedback & Contributions
+
+Found a bug? Have a feature request? Open an [issue](https://github.com/turrext) or submit a pull request.
+
+---
+
+## 📜 License
+
+MIT License — free to use, modify, and distribute with credit.
+
+---
+
+## 🙌 Credits
+
+Crafted with 💻 for serious RP servers. Developed by turrext.
+
+🙌 Credits
+
+Crafted with 💻 for serious RP servers. Developed by [YourNameHere].
+
