@@ -8,7 +8,7 @@ Gang Shipment &amp; Zone Control System for FiveM for QBCore
 > **Author:** Turrext  
 > **Version:** 1.0
 
-A modular and immersive FiveM script for QB-Core featuring dynamic gang territories, interactive NPCs, timed shipment drops, and a black-market system. Fully configurable and optimized for RP servers seeking deeper criminal gameplay.
+A modular and immersive FiveM script for QB-Core integrating dynamic gang territories with shipment drops based on who controls area, interactive NPCs, timed shipment drops, and a black-market system. Fully configurable and optimized for RP servers seeking deeper criminal gameplay.
 
 ---
 
